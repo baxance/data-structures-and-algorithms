@@ -47,16 +47,9 @@ appendFirstToLast(a);
 console.log(a) prints [1, 2, 3, 1]
 ------------------------------------------------------------------------------------------------ */
 
-// test('It should append by modifying the oiginal', () => {
-//   const a = ['Yes', 'it', 'is'];
-//   appendFirstToLast(a);
-
-//   expect(a).toStrictEqual(['Yes', 'it', 'is', 'Yes']);
-
 const appendFirstToLast = (arr) => {
   // Solution code here...
-  const a = ['Yes', 'it', 'is'];
-  a.splice(3, 0, 'Yes');
+  arr.push(arr[0]);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -76,6 +69,7 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 
 const addBirthYearProperty = (obj, year) => {
   // Solution code here...
+  obj.yearBorn = year;
 };
 
 /* ------------------------------------------------------------------------------------------------
