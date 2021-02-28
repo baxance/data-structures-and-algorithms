@@ -5,13 +5,13 @@ CHALLENGE 1 - Review
 
 Write a function named transformToLis that, given an object, returns an array of the key value pairs as html list items.
 
-For example: 
+For example:
 {
   name: 'bob',
   age: 32
 }
 
-Becomes: 
+Becomes:
 [
 <li>name: bob</li>,
 <li>age: 32</li>
@@ -20,6 +20,11 @@ Becomes:
 
 function transformToLis(obj){
   // Solution code here...
+  const results = [];
+  for (const property in obj) {
+    results.push(`<li>${property}: ${obj[property]}</li>`);
+  }
+  return results;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -31,6 +36,10 @@ Write a function named addValues that, given an array of numbers as input, uses 
 
 const addValues = (arr) => {
   // Solution code here...
+  const sum = arr.reduce(function (accumulator, currentValue) {
+    return accumulator + currentValue;
+  }, 0);
+  return sum;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -47,6 +56,11 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 const addPurchases = (arr) => {
   // Solution code here...
+  let initialValue = 0;
+  const total = arr.reduce(function (accumulator, currentValue) {
+    return accumulator + currentValue.purchasePrice;
+  }, initialValue);
+  return total;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -59,6 +73,9 @@ Note: You may not use the array's built-in length property.
 
 const countNumberOfElements = (arr) => {
   // Solution code here...
+  const count = arr.reduce(r => r + 1, 0);
+  console.log(count);
+  return count;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -116,9 +133,13 @@ let starWarsData = [{
   birth_year: '19BBY',
   gender: 'female'
 }];
-
+//Write a function named returnNames that, given the Star Wars data, uses reduce to return an array containing the names of the characters.
 const returnNames = (arr) => {
   // Solution code here...
+  const names = arr.reduce(function(accumulator, currentValue) {
+    return [...accumulator, currentValue.name];
+  }, []);
+  return names;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -131,6 +152,12 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   // Solution code here...
+  const bucket = str.split('');
+
+  const reverse = bucket.reduce((reversed, character) => {
+    return character + reversed;
+  }, '');
+  return reverse;
 };
 
 /* ------------------------------------------------------------------------------------------------
