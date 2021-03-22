@@ -2,6 +2,12 @@
 
 # Language: `Java`
 
+## Table of Contents
+
+Challenge | Code
+----------|-----
+Challenge 01 | [Array Reversal](java/ArrayReverse.java)
+
 # Reverse an Array
 
 ## Challenge
