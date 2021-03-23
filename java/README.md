@@ -6,7 +6,7 @@
 
 Challenge | Code
 ----------|-----
-Challenge 01 | [Array Reversal](java/ArrayReverse.java)
+Challenge 01 | [Array Reversal](ArrayReverse.java)
 
 # Reverse an Array
 
@@ -21,4 +21,4 @@ Nested `for` loops, the first taking in the array of numbers and positioning eac
 ## Solution
 
 Whiteboarding by Matthew Simms, with Andy Agulue and Victor Sullivan
-![whiteboard](assets/whiteBoard_challenge01.PNG)
+![whiteboard](assets/ArrayReverse.PNG)
