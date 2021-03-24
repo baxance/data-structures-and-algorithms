@@ -8,6 +8,8 @@ Challenge | Code
 ----------|-----
 Challenge 01 | [Array Reversal](lib/src/main/java/challenges/ArrayReverse.java)
 Challenge 02 | [Array Shift](lib/src/main/java/challenges/ArrayShift.java)
+Challenge 03 | [Binary Search](lib/src/main/java/challenges/BinarySearch.java)
+
 
 # Reverse an Array
 
@@ -38,3 +40,20 @@ Create a method which takes in an array and a number. Establish the required len
 
 Whiteboarding by Barrett Nance with Matthew Simms
 ![whiteboard](assets/ArrayShift.jpg)
+
+# Binary Search
+
+## Challenge
+
+Write a function called BinarySearch which takes in 2 parameters: a sorted array and the search key. Without utilizing any of the built-in methods available to your language, return the index of the array’s element that is equal to the search key, or -1 if the element does not exist.
+
+## Approach & Efficiency
+
+Created a method which takes as input a sorted `array` of ints, and an int `key` to be used as a search term.
+Method instantiates a `low` value of 0 and a `high` value created from the length of the `input array -1`
+Created `while loop` that runs while the `low` number is less than or equals to the `high` number. upon each iteration of the loop a `mid` point is calculated by summing the `low` and `high` values and dividing them by 1. Next it checks if the input `key` is equal to the value at the `mid` position of the input `array`. If so, the loop ends and that mid position value is returned. If not, the loop checks if the `key` is greater than the value at the `mid` position of the `array`. If so, it changes the `low` value by +1 to it and reiterating the loop. Otherwise the high value has it's value set to the mid value -1. If the key never finds it's match in the loop, it exits and returns -1.
+
+## Solution
+
+Whiteboarding by Matthew Simms with Matthew Simms
+![whiteboard](assets/BinarySearch.PNG)
