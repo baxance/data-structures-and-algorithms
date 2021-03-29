@@ -79,3 +79,32 @@ I have absolutely no clue about the space/time efficiency in any aspect. I don't
 - Insert method that receives an int as input. Creates a new node at the position of head that carries the input value. If statement checks if the tail position is null, and if so creates another head in the list and assigns it a the value.
 - Includes method takes in an int, and loops for as long as the current node is null. If the input value matches the value of the current node then the method returns true. If not, the loop tests the next node in the list. When the loop runs out of nodes to check and has not found it's match it returns false.
 - toString method takes in no arguments. It creates an empty string to serve as a vessel, and loops through the nodes in the list and adds the node values along with string concatenation for formatting to the empty string , and then returns the now filled string.
+
+# Append/Insert Linked List
+
+## Challenge
+
+Write the following methods for the Linked List class:
+
+- .append(value) which adds a new node with the given value to the end of the list
+
+- .insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
+
+- .insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+
+## Approach & Efficiency
+
+- Append:
+Looped through the LL, and while the visited node has a value it moves to the next node. If the node is null then a new node is created in it's place posessing the value taken in by the method, and a new node of null is created and added to the end of the list.
+
+- insertBefore
+Looped through the LL while the current node is not null. If the next node in the LL has a value that matches the input value then a new node carrying the NEW INPUT value is created and put in the current nodes position in the LL, and that node is moved down the LL by one. God that's hard to explain.
+
+- insertAfter
+Looped through the LL while the current node is not null and if the next node in the LL has a value that mayched the input value then a new node carrying the new input value is created and put in the current node's position in the LL and that node is moved UP the LL by one. I think.
+
+
+## Solution
+
+![whiteboard](assets/LLappend.jpg)
+Only did one whiteboard for the first method, have to get a move on with the lab work.
