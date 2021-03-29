@@ -90,4 +90,76 @@ public class LinkedListTest {
     assertEquals(expected, actual);
   }
 
+  @Test //1 add a node to the end of the linked list
+  public void appendTest() {
+    LinkedList list = new LinkedList();
+    list.insert(3);
+    list.insert(2);
+    list.insert(1);
+    list.append(4);
+    String expected = "{ 1 } -> { 2 } -> { 3 } -> { 4 } -> NULL";
+    String actual = list.toString();
+    assertEquals(expected, actual);
+  }
+
+  @Test //2 add multiple nodes to the end of the list
+  public void appendTest2() {
+    LinkedList list = new LinkedList();
+    list.insert(3);
+    list.insert(2);
+    list.insert(1);
+    list.append(4);
+    list.append(1);
+    String expected = "{ 1 } -> { 2 } -> { 3 } -> { 4 } -> { 1 } -> NULL";
+    String actual = list.toString();
+    assertEquals(expected, actual);
+  }
+
+  @Test //3 insert a node before another
+  public void insertBeforeTest() {
+    LinkedList list = new LinkedList();
+    list.insert(3);
+    list.insert(2);
+    list.insert(1);
+    list.insertBefore(10, 2);
+    String expected = "{ 1 } -> { 10 } -> { 2 } -> { 3 } -> NULL";
+    String actual = list.toString();
+    assertEquals(expected, actual);
+  }
+
+  @Test //4 insert a node before first -- FAILING
+  public void insertBeforeTest2() {
+    LinkedList list = new LinkedList();
+    list.insert(3);
+    list.insert(2);
+    list.insert(1);
+    list.insertBefore(10, 1);
+    String expected = "{ 10 } -> { 1 } -> { 2 } -> { 3 } -> NULL";
+    String actual = list.toString();
+    assertEquals(expected, actual);
+  }
+
+  @Test //5 insert a node into the middle of list
+  public void insertAfterTest() {
+    LinkedList list = new LinkedList();
+    list.insert(3);
+    list.insert(2);
+    list.insert(1);
+    list.insertAfter(10, 2);
+    String expected = "{ 1 } -> { 2 } -> { 10 } -> { 3 } -> NULL";
+    String actual = list.toString();
+    assertEquals(expected, actual);
+  }
+
+  @Test //6 insert a node after last
+  public void insertAfterTest2() {
+    LinkedList list = new LinkedList();
+    list.insert(3);
+    list.insert(2);
+    list.insert(1);
+    list.insertAfter(10, 3);
+    String expected = "{ 1 } -> { 2 } -> { 3 } -> { 10 } -> NULL";
+    String actual = list.toString();
+    assertEquals(expected, actual);
+  }
 }
