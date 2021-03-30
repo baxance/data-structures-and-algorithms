@@ -4,7 +4,7 @@ public class LinkedList {
   public Node head;
   public Node tail;
 
-  public LinkedList(){
+  public LinkedList() {
     this.head = null;
     this.tail = null;
   }
@@ -13,15 +13,15 @@ public class LinkedList {
     Node newNode = new Node(val);
     newNode.next = this.head;
     this.head = newNode;
-    if(this.tail == null){
+    if (this.tail == null) {
       this.tail = newNode;
     }
   }
 
   public boolean includes(int val) {
     Node currentNode = this.head;
-    while (currentNode != null){
-      if(currentNode.val == val){
+    while (currentNode != null) {
+      if (currentNode.val == val) {
         return true;
       }
       currentNode = currentNode.next;
@@ -48,21 +48,21 @@ public class LinkedList {
   public String toString() {
     String str = "";
     Node currentNode = this.head;
-    while (currentNode != null){
+    while (currentNode != null) {
       str += "{ " + currentNode.val + " } -> ";
       currentNode = currentNode.next;
     }
     str += "NULL";
     System.out.println("STRING RESULTS: " + str);
-  return str;
+    return str;
   }
 
   public void append(int val) {
     Node currentNode = this.head;
 //    int index = 0;
-    while (currentNode != null){
+    while (currentNode != null) {
 //      index ++;
-      if (currentNode.next == null){
+      if (currentNode.next == null) {
         Node newNode = new Node(val);
         newNode.next = null;
         currentNode.next = newNode;
@@ -73,7 +73,7 @@ public class LinkedList {
     }
   }
 
-  public void insertBefore(int newVal, int val){
+  public void insertBefore(int newVal, int val) {
     Node currentNode = this.head;
     while (currentNode != null) {
 //      if (currentNode.val == val) {
@@ -92,7 +92,7 @@ public class LinkedList {
     }
   }
 
-  public void insertAfter(int newVal, int val){
+  public void insertAfter(int newVal, int val) {
     Node currentNode = this.head;
     while (currentNode != null) {
       if (currentNode.val == val) {
@@ -105,4 +105,39 @@ public class LinkedList {
     }
   }
 
+  public int valFromEnd(int k) {
+    Node current = this.head;
+    int counter = 1;
+    while (current != null) {
+      System.out.println("1) COUNTER: " + counter);
+//      System.out.println("2) COUNTER - " + k + ": " + (counter - k - 1));
+      System.out.println("3) NODE VALUE: " + current.val);
+      counter++;
+      if (k < 0) {
+        System.out.println("argument out of bounds");
+        return 0;
+      }
+      current = current.next;
+    }
+    int target = (counter - k + 1);
+    System.out.println("TARGET: " + target);
+    int targetCounter = 1;
+    Node current2 = this.head;
+    while (current2 != null) {
+      System.out.println("CURRENT2 VAL: " + current2.val);
+      targetCounter++;
+      if (target == targetCounter) {
+        System.out.println(current2.val);
+        return current2.val;
+      }
+      else if (target == 0) {
+        return current2.val;
+      }
+      current2 = current2.next;
+    }
+    System.out.println(k + " from the end is unreachable...");
+    return  0 ;
+  }
+
 }
+
