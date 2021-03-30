@@ -11,6 +11,8 @@ Challenge 02 | [Array Shift](lib/src/main/java/challenges/ArrayShift.java)
 Challenge 03 | [Binary Search](lib/src/main/java/challenges/BinarySearch.java)
 Challenge 05 | [Linked List](lib/src/main/java/challenges/linkedList/LinkedList.java)
 Challenge 06 | [Linked List (append/insert)](lib/src/main/java/challenges/linkedList/LinkedList.java)
+Challenge 06 | [Linked List (Value from the End)](lib/src/main/java/challenges/linkedList/LinkedList.java)
+
 
 # Reverse an Array
 
