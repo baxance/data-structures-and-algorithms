@@ -10,7 +10,7 @@ Challenge 01 | [Array Reversal](lib/src/main/java/challenges/ArrayReverse.java)
 Challenge 02 | [Array Shift](lib/src/main/java/challenges/ArrayShift.java)
 Challenge 03 | [Binary Search](lib/src/main/java/challenges/BinarySearch.java)
 Challenge 05 | [Linked List](lib/src/main/java/challenges/linkedList/LinkedList.java)
-
+Challenge 06 | [Linked List (append/insert)](lib/src/main/java/challenges/linkedList/LinkedList.java)
 
 # Reverse an Array
 
@@ -87,24 +87,35 @@ I have absolutely no clue about the space/time efficiency in any aspect. I don't
 Write the following methods for the Linked List class:
 
 - .append(value) which adds a new node with the given value to the end of the list
-
 - .insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
-
 - .insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
 
-## Approach & Efficiency
-
-- Append:
-Looped through the LL, and while the visited node has a value it moves to the next node. If the node is null then a new node is created in it's place posessing the value taken in by the method, and a new node of null is created and added to the end of the list.
-
-- insertBefore
-Looped through the LL while the current node is not null. If the next node in the LL has a value that matches the input value then a new node carrying the NEW INPUT value is created and put in the current nodes position in the LL, and that node is moved down the LL by one. God that's hard to explain.
-
-- insertAfter
-Looped through the LL while the current node is not null and if the next node in the LL has a value that mayched the input value then a new node carrying the new input value is created and put in the current node's position in the LL and that node is moved UP the LL by one. I think.
-
+## API
 
 ## Solution
 
+Whiteboarding by Matthew Simms with Matthew Simms
 ![whiteboard](assets/LLappend.jpg)
-Only did one whiteboard for the first method, have to get a move on with the lab work.
+
+# k-from-end LL
+
+## Challenge Description
+
+Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+## Approach & Efficiency
+
+The whiteboard is a bit outdated after a bit of coding.
+
+- Method takes in an integer `k` and returns the value of the node that is `k` nodes from the end of the Linked List
+- instantiated a counter that starts at 1
+- While-Looped through the LL and for every iteration I added 1 to the counter
+- Added a conditional so that if `k` is negative the loop would break and return an Exception
+- instantiated a second counter starting at 1, and a Target int that would take the counter from the previous loop and subtract `k` from it and add 1 to that.
+- While-looped again through the LL and for every iteration adding 1 to the new counter.
+- conditionals check if the Target variable equals the Counter, and if so returns the value of that node that is `k` places from the end.
+- or if the target is 0 then it returns that node value.
+- If the conditionals are never met and then the method returns a zero and a statement
+
+## Solution
+![whiteboard](assets/LLvalFromEnd.jpg)

@@ -162,4 +162,67 @@ public class LinkedListTest {
     String actual = list.toString();
     assertEquals(expected, actual);
   }
+
+  @Test //cc7 test 1
+  public void kValGreaterThanTest() {
+    LinkedList list = new LinkedList();
+    list.insert(5);
+    list.insert(4);
+    list.insert(3);
+    list.insert(2);
+    list.insert(1);
+    // {1, 2, 3, 4, 5} <== LL
+    int expected = 0;
+    int actual = list.valFromEnd(6);
+    assertEquals(expected, actual);
+  }
+
+  @Test //cc7 test 2 // NOT WORKING but im in deep and need to do the lab
+  public void kValEqualsLengthTest() {
+    LinkedList list = new LinkedList();
+    list.insert(5);
+    list.insert(4);
+    list.insert(3);
+    list.insert(2);
+    list.insert(1);
+    // {1, 2, 3, 4, 5} <== LL
+    int expected = 0;
+    int actual = list.valFromEnd(5);
+    assertEquals(expected, actual);
+  }
+  @Test //cc7 test 3
+  public void kValNegativeTest() {
+    LinkedList list = new LinkedList();
+    list.insert(5);
+    list.insert(4);
+    list.insert(3);
+    list.insert(2);
+    list.insert(1);
+    // {1, 2, 3, 4, 5} <== LL
+    int expected = 0;
+    int actual = list.valFromEnd(-1);
+    assertEquals(expected, actual);
+  }
+  @Test //cc7 test 4
+  public void kValSingleLLTest() {
+    LinkedList list = new LinkedList();
+    list.insert(3);
+    // {3} <== LL
+    int expected = 3;
+    int actual = list.valFromEnd(1);
+    assertEquals(expected, actual);
+  }
+  @Test //cc7 test 5
+  public void kValEasyTest() {
+    LinkedList list = new LinkedList();
+    list.insert(5);
+    list.insert(4);
+    list.insert(3);
+    list.insert(2);
+    list.insert(1);
+    // {1, 2, 3, 4, 5} <== LL
+    int expected = 3;
+    int actual = list.valFromEnd(3);
+    assertEquals(expected, actual);
+  }
 }
