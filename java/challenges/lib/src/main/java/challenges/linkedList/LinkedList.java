@@ -139,5 +139,26 @@ public class LinkedList {
     return  0 ;
   }
 
+  public static LinkedList zipLists(LinkedList one, LinkedList two) {
+    if (one == null){
+      return two;
+    }
+    if (two == null){
+      return one;
+    }
+    Node current1 = one.head;
+    Node current2 = two.head;
+    Node holder;
+    while (current1 != null) {
+      holder = current1.next;
+      current1.next = current2;
+      current1.next.next = holder;
+      current1 = current1.next.next;
+      current2 = current2.next;
+    }
+    return one;
+  }
+
+
 }
 

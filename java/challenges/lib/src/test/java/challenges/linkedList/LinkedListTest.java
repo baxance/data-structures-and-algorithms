@@ -225,4 +225,21 @@ public class LinkedListTest {
     int actual = list.valFromEnd(3);
     assertEquals(expected, actual);
   }
+
+  @Test //cc8 test1
+  public void zipTest(){
+    LinkedList one = new LinkedList();
+    one.insert(5);
+    one.insert(3);
+    one.insert(1);
+    LinkedList two = new LinkedList();
+    two.insert(6);
+    two.insert(4);
+    two.insert(2);
+
+    String expected = "{ 1 } -> { 2 } -> { 3 } -> { 5 } -> NULL";
+    LinkedList actual = LinkedList.zipLists(one, two);
+    System.out.println("results: " + actual);
+    assertEquals(expected, actual.toString());
+  }
 }

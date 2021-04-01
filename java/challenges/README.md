@@ -11,8 +11,8 @@ Challenge 02 | [Array Shift](lib/src/main/java/challenges/ArrayShift.java)
 Challenge 03 | [Binary Search](lib/src/main/java/challenges/BinarySearch.java)
 Challenge 05 | [Linked List](lib/src/main/java/challenges/linkedList/LinkedList.java)
 Challenge 06 | [Linked List (append/insert)](lib/src/main/java/challenges/linkedList/LinkedList.java)
-Challenge 06 | [Linked List (Value from the End)](lib/src/main/java/challenges/linkedList/LinkedList.java)
-
+Challenge 07 | [Linked List (Value from the End)](lib/src/main/java/challenges/linkedList/LinkedList.java)
+Challenge 08 | [Zipped Linked List](lib/src/main/java/challenges/linkedList/LinkedList.java)
 
 # Reverse an Array
 
@@ -121,3 +121,23 @@ The whiteboard is a bit outdated after a bit of coding.
 
 ## Solution
 ![whiteboard](assets/LLvalFromEnd.jpg)
+
+# Reverse an Array
+
+## Challenge
+
+Write a function called zipLists which takes two linked lists as arguments. Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list. Try and keep additional space down to O(1). You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+## Approach & Efficiency
+
+CREDIT TO JOSEPH FOR THE LOGIC this is not my solution, but what was explained to me.
+
+First area pair of checks to see if either Linked List (LL) is null, and if so it returns the other. Creates two variables, each representing the head of each LL, and creates an empty HOLDER variable to hold/clone values while another value takes it's place in the LL.
+While-loop through the first LL for as long as it is not null. Assign the NEXT value of the current node to the holder variable, and assign the head value of the second LL to it's position instead. Then the next-NEXT position from the head assumes the value of the holder, previously second in line from the first LL and the second LL iterated to the next value and the loop repeats.
+
+When the loop finished (when the value is null) the first LL, now zipped, is returned.
+
+## Solution
+
+Whiteboarding by Joseph, with Andy Agulue
+![whiteboard](assets/ZipList.PNG)
