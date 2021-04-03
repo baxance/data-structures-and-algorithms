@@ -141,3 +141,51 @@ When the loop finished (when the value is null) the first LL, now zipped, is ret
 
 Whiteboarding by Joseph, with Andy Agulue
 ![whiteboard](assets/ZipList.PNG)
+
+# Stacks and Queues
+<!-- Short summary or background information -->
+
+## Challenge
+
+- Create a Node class that has properties for the value stored in the Node, and a pointer to the next node.
+- Create a Stack class that has a top property. It creates an empty Stack when instantiated.
+This object should be aware of a default empty value assigned to top when the stack is created.
+- Define a method called push which takes any value as an argument and adds a new node with that value to the top of the stack with an O(1) Time performance.
+- Define a method called pop that does not take any argument, removes the node from the top of the stack, and returns the node’s value.
+Should raise exception when called on empty stack
+- Define a method called peek that does not take an argument and returns the value of the node located on top of the stack, without removing it from the stack.
+Should raise exception when called on empty stack
+- Define a method called isEmpty that takes no argument, and returns a boolean indicating whether or not the stack is empty.
+- Create a Queue class that has a front property. It creates an empty Queue when instantiated.
+This object should be aware of a default empty value assigned to front when the queue is created.
+- Define a method called enqueue which takes any value as an argument and adds a new node with that value to the back of the queue with an O(1) Time performance.
+- Define a method called dequeue that does not take any argument, removes the node from the front of the queue, and returns the node’s value.
+Should raise exception when called on empty queue
+- Define a method called peek that does not take an argument and returns the value of the node located in the front of the queue, without removing it from the queue.
+Should raise exception when called on empty queue
+- Define a method called isEmpty that takes no argument, and returns a boolean indicating whether or not the queue is empty.
+
+## Approach & Efficiency & API
+
+Stack
+
+- Push
+  - Pushes a new node onto the top of the stack, O(1)
+- Pop
+  - Puts the top node into a temporary variable and reassigns the next node in line as the top. O(1)
+- Peek
+  - a method that returns the top value, O(1)
+- isEmpty
+  - a method that returns True if the top value is empty. O(1)
+
+Queue
+
+- Enqueue
+  - Assigns the input node to the front, if the front is empty, else the next node from the rear is given the value O(1)
+- Dequeue
+  - Assigns the front value to a temporary variable and makes the next node from the front the new front, and returns the value of the temp variable O(1)
+- Peek
+  - Returns the value of the front node O(1)
+- isEmpty
+  - a method that returns True if the top value is empty O(1)
+
