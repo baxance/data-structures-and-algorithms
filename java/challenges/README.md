@@ -13,6 +13,7 @@ Challenge 05 | [Linked List](lib/src/main/java/challenges/linkedList/LinkedList.
 Challenge 06 | [Linked List (append/insert)](lib/src/main/java/challenges/linkedList/LinkedList.java)
 Challenge 07 | [Linked List (Value from the End)](lib/src/main/java/challenges/linkedList/LinkedList.java)
 Challenge 08 | [Zipped Linked List](lib/src/main/java/challenges/linkedList/LinkedList.java)
+Challenge 10 | [Stacks and Queues](lib/src/main/java/challenges/stacksandqueues/Stack.java)
 
 # Reverse an Array
 
@@ -122,7 +123,7 @@ The whiteboard is a bit outdated after a bit of coding.
 ## Solution
 ![whiteboard](assets/LLvalFromEnd.jpg)
 
-# Reverse an Array
+# Zipped Linked List
 
 ## Challenge
 
