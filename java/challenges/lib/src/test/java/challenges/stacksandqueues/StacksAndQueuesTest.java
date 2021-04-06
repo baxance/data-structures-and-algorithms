@@ -1,6 +1,7 @@
 package challenges.stacksandqueues;
 
 import org.junit.Test;
+
 import java.util.EmptyStackException;
 import java.util.NoSuchElementException;
 
@@ -12,6 +13,7 @@ public class StacksAndQueuesTest {
   @Test //cc10 test 1
   public void pushStackTest() {
     Stack test = new Stack();
+    test.push(5);
     test.push(10);
     Object expected = 10;
     Object actual = test.top.val;
@@ -147,4 +149,41 @@ public class StacksAndQueuesTest {
     assertEquals(expected, actual);
   }
 
+
+  //======================PSEUDO-QUEUE==========================//
+
+
+  @Test
+  public void pseudoEnqueueTest(){
+    PseudoQueue test = new PseudoQueue();
+    test.pseudoEnqueue(20);
+    test.pseudoEnqueue(15);
+    test.pseudoEnqueue(10);
+    test.pseudoEnqueue(5);
+    Object expected = 5;
+    Object actual = test.stackOne.top.val;
+    assertEquals(expected, actual);
+}
+
+  @Test
+  public void pseudoDequeueTest(){
+    PseudoQueue test = new PseudoQueue();
+    test.pseudoEnqueue(20);
+    test.pseudoEnqueue(15);
+    test.pseudoEnqueue(10);
+    test.pseudoEnqueue(5);
+    Object expected = 20;
+    Object actual = test.pseudoDequeue();
+    assertEquals(expected, actual);
   }
+
+//  public void pushStackTest() {
+//    Stack test = new Stack();
+//    test.push(5);
+//    test.push(10);
+//    Object expected = 10;
+//    Object actual = test.top.val;
+//    System.out.println("TOP: " + test.top.val);
+//    assertEquals(expected, actual);
+//  }
+}

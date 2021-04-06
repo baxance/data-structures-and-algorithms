@@ -14,6 +14,8 @@ Challenge 06 | [Linked List (append/insert)](lib/src/main/java/challenges/linked
 Challenge 07 | [Linked List (Value from the End)](lib/src/main/java/challenges/linkedList/LinkedList.java)
 Challenge 08 | [Zipped Linked List](lib/src/main/java/challenges/linkedList/LinkedList.java)
 Challenge 10 | [Stacks and Queues](lib/src/main/java/challenges/stacksandqueues/Stack.java)
+Challenge 11 | [Queue using Stacks](lib/src/main/java/challenges/stacksandqueues/PseudoQueue.java)
+
 
 # Reverse an Array
 
@@ -190,3 +192,29 @@ Queue
 - isEmpty
   - a method that returns True if the top value is empty O(1)
 
+# Queue using Stacks
+
+## Challenge
+
+Create a brand new PseudoQueue class. Do not use an existing Queue. Instead, this PseudoQueue class will implement our standard queue interface (the two methods listed below), but will internally only utilize 2 Stack objects. Ensure that you create your class with the following methods:
+
+- enqueue(value) which inserts value into the PseudoQueue, using a first-in, first-out approach.
+- dequeue() which extracts a value from the PseudoQueue, using a first-in, first-out approach.
+
+The Stack instances have only push, pop, and peek methods. You should use your own Stack implementation. Instantiate these Stack objects in your PseudoQueue constructor.
+
+## Approach & Efficiency
+
+pseudoEnqueue
+
+- Take in value to push into a stack
+- call the `push()` method from the previous code challenge onto the first stack.
+
+pseudoDequeue
+
+- check both stacks to see if they are null and thus have nothing to dequeue. Throw error if so.
+- Loop through the entirety of stack1 and simultaneously POP() from it and PUSH() into stack2. When the loop breaks stack2 will theoretically be an inverted stack 1. So the top value popped will be the very first value added to stack1. FIFO.
+
+## Solution
+
+![whiteboard](assets/pseudoQueue.jpg)
