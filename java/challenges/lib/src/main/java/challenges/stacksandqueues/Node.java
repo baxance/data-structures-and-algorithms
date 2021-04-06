@@ -1,7 +1,7 @@
 package challenges.stacksandqueues;
 
 public class Node {
-  Object val;
+  public Object val;
   Node next;
   Node prev;
 

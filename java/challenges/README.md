@@ -15,7 +15,7 @@ Challenge 07 | [Linked List (Value from the End)](lib/src/main/java/challenges/l
 Challenge 08 | [Zipped Linked List](lib/src/main/java/challenges/linkedList/LinkedList.java)
 Challenge 10 | [Stacks and Queues](lib/src/main/java/challenges/stacksandqueues/Stack.java)
 Challenge 11 | [Queue using Stacks](lib/src/main/java/challenges/stacksandqueues/PseudoQueue.java)
-
+Challenge 12 | [Animal Shelter](lib/src/main/java/challenges/utilities/AnimalShelter.java)
 
 # Reverse an Array
 
@@ -218,3 +218,31 @@ pseudoDequeue
 ## Solution
 
 ![whiteboard](assets/pseudoQueue.jpg)
+
+# Queue using Stacks
+
+## Challenge
+
+Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.
+- Implement the following methods:
+  - enqueue(animal): adds animal to the shelter. animal can be either a dog or a cat object.
+  - dequeue(pref): returns either a dog or a cat. If pref is not "dog" or "cat" then return null.
+
+## Approach & Efficiency
+
+Create new AnimalShelter class and constructor that creates two separate queues for each specific animal.
+
+enqueueAnimal()
+- Takes in an object. If is is a dog, enqueue it into the dogQueue or into the catQueue if it's a cat.
+- If parameter is neither dog/cat throws exception
+- O(1)
+
+dequeueAnimal()
+- Takes in an Object for preference. if Object is a dog dequeue and return from the dogQueue, vice versa for cat/catQueue.
+- if preference is neither return null
+- O(1)
+
+## Solution
+I give up whiteboarding by hand. Moving shapes are much better than a bunch of poorly drawn lines.
+Whiteboarding by Barrett Nance, Leaundrae McKinney, Matthew Simms
+![whiteboard](assets/animalShelter.jpg)

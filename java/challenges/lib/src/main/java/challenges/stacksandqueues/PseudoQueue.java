@@ -31,5 +31,7 @@ public class PseudoQueue {
       val = stackTwo.pop();
     }return val;
   }
+  // review: just enqueue everything into stack one, and dequeue in stack 2 only. Stack 1 only pushes into 2
+  // when 2 is empty.
 
 }
