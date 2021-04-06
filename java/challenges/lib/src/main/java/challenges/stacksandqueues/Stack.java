@@ -12,8 +12,12 @@ public class Stack {
 
   public void push(Object val){
     Node newNode = new Node(val);
+//    if (isEmpty()) {
+//      top = newNode;
+//    } else {
     newNode.next = top;
     top = newNode;
+//    }
   }
 
   public Object pop(){
