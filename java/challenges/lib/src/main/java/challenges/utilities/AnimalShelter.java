@@ -1,6 +1,7 @@
 package challenges.utilities;
 
 import challenges.stacksandqueues.Queue;
+import org.checkerframework.checker.units.qual.A;
 
 public class AnimalShelter {
   Queue dogQueue;
@@ -13,9 +14,11 @@ public class AnimalShelter {
 
   public void enqueueAnimal(Object animal) throws Exception {
     if (animal == "dog"){
-      dogQueue.enqueue(animal);
+      Animal dog = new Animal(animal);
+      dogQueue.enqueue(dog);
     } else if (animal == "cat"){
-      catQueue.enqueue(animal);
+      Animal cat = new Animal(animal);
+      catQueue.enqueue(cat);
     }
     else throw new Exception("Only accepting cat and dog");
   }
