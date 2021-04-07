@@ -14,8 +14,9 @@ public class AnimalShelterTest {
   test.enqueueAnimal("cat");
     System.out.println(test.catQueue.front.val);
     System.out.println(test.dogQueue.front.val);
+    System.out.println(test.dogQueue.front.val.toString());
   Object expected = "cat";
-  Object actual = test.catQueue.front.val;
+  Object actual = test.catQueue.front.val.toString();
   assertEquals(expected, actual);
   AnimalShelter testPig = new AnimalShelter();
   assertThrows(Exception.class, ()-> {testPig.enqueueAnimal("pig");});
