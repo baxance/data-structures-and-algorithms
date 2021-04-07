@@ -6,4 +6,10 @@ public class Animal {
   public Animal(Object type){
     this.type = type;
   }
+
+  @Override
+  public String toString() {
+    return (String) type;
+  }
+
 }
