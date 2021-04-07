@@ -31,7 +31,7 @@ public class AnimalShelterTest {
     test.enqueueAnimal("dog");
     test.enqueueAnimal("cat");
     Object expected = "dog";
-    Object actual = test.dequeueAnimal("dog");
+    Object actual = test.dequeueAnimal("dog").toString();
     assertEquals(expected, actual);
     AnimalShelter testNull = new AnimalShelter();
     test.enqueueAnimal("dog");
