@@ -246,3 +246,22 @@ dequeueAnimal()
 I give up whiteboarding by hand. Moving shapes are much better than a bunch of poorly drawn lines.
 Whiteboarding by Barrett Nance, Leaundrae McKinney, Matthew Simms
 ![whiteboard](assets/animalShelter.jpg)
+
+# Multi-Bracket Validation
+
+## Challenge
+
+Your function should take a string as its only argument, and should return a boolean representing whether or not the brackets in the string are balanced.
+
+## Approach & Efficiency
+
+- Create a Stack
+- Loop through the characters of the input String
+- for every OPENING bracket found, Push it into the Stack
+- for every CLOSING bracket found, Pop from the stack and test if it is the Opening bracket of the Closing bracket found
+- If it does not match the loop breaks and the method returns false
+- If it does match the loop iterates again, finding Opening/Closing brackets and comparing them
+- If by the end of the loop the Stack is empty by having all of the Opening brackets in it popped then the brackets are balanced and the method returns TRUE
+
+## Solution
+![whiteboard](assets/MBV.jpg)
