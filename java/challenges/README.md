@@ -16,6 +16,7 @@ Challenge 08 | [Zipped Linked List](lib/src/main/java/challenges/linkedList/Link
 Challenge 10 | [Stacks and Queues](lib/src/main/java/challenges/stacksandqueues/Stack.java)
 Challenge 11 | [Queue using Stacks](lib/src/main/java/challenges/stacksandqueues/PseudoQueue.java)
 Challenge 12 | [Animal Shelter](lib/src/main/java/challenges/utilities/AnimalShelter.java)
+Challenge 13 | [Multi-Bracket Validation](lib/src/main/java/challenges/utilities/MultiBracketValidation.java)
 
 # Reverse an Array
 
