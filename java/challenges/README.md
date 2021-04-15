@@ -17,6 +17,7 @@ Challenge 10 | [Stacks and Queues](lib/src/main/java/challenges/stacksandqueues/
 Challenge 11 | [Queue using Stacks](lib/src/main/java/challenges/stacksandqueues/PseudoQueue.java)
 Challenge 12 | [Animal Shelter](lib/src/main/java/challenges/utilities/AnimalShelter.java)
 Challenge 13 | [Multi-Bracket Validation](lib/src/main/java/challenges/utilities/MultiBracketValidation.java)
+Challenge 15 | [Binary Tree](lib/src/main/java/challenges/tree/Tree.java)
 
 # Reverse an Array
 
@@ -266,3 +267,19 @@ Your function should take a string as its only argument, and should return a boo
 
 ## Solution
 ![whiteboard](assets/MBV.jpg)
+
+# Trees
+
+## Challenge
+- Create a Node class that has properties for the value stored in the node, the left child node, and the right child node.
+- Create a BinaryTree class
+  - Define a method for each of the depth first traversals called preOrder, inOrder, and postOrder which returns an array of the values, ordered appropriately.
+
+## Approach & Efficiency
+Much to my detriment I wanted to do all three methods recursively. With a Big-O(n) of O(1)
+
+## API
+Method calls the recursive _Method and passes into it the Node and a new ArrayList. _Method adds the current Node value to the ArrayList and moves it's pointer to the Left or the Right Node and repeats the process to add the new value to the ArrayList. When the pointer reaches a dead end and there are no new nodes to find the method returns the ArrayList of values.
+
+## Solution
+![whiteboard](assets/BinaryTree.jpg)
