@@ -63,9 +63,3 @@ ALGORITHM Merge(left, right, arr)
     else
        set remaining entries in arr to remaining values in left
 ```
-
-
-
-
-
-
