@@ -58,4 +58,18 @@ public class Graph<T> {
     return vertexList.size();
   }
 
+  public List<Object> breadthFirst(Vertex start){
+    List<Object> breadthList = new ArrayList<>();
+
+//    for (Vertex vertex : vertexList){
+//      breadthList.add(vertex);
+      for (Edge edge : edgeList){
+        if (edge.destVertex != null) {
+          breadthList.add(edge.destVertex);
+        }
+      }
+//    }
+    return breadthList;
+  }
+
 }

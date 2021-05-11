@@ -65,8 +65,10 @@ public class GraphTest {
     graph.addEdge(vtx1, vtx2, 3);
     graph.addEdge(vtx1, vtx3, 4);
     graph.addEdge(vtx1, vtx4, 5);
-    System.out.println(graph.Size());
-    System.out.println(graph.GetNeighbors(vtx1));
+//    System.out.println(graph.Size());
+//    System.out.println(graph.GetNeighbors(vtx1));
+    System.out.println(graph.breadthFirst(vtx1));
+    System.out.println(graph.breadthFirst(vtx1).size());
   }
 
 
