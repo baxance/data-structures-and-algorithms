@@ -1,29 +1,37 @@
 package graph;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Vertex<T> {
   public T value;
-  public List<Edge> edges;
+  public List<Edge> edges = new ArrayList<>();
 
   public Vertex(T value){
     this.value = value;
-    this.edges = null;
+//    this.edges = null;
   }
 
   public T getValue() {return value;}
   public void setValue(T value) {this.value = value;}
   public List<Edge> getEdges() {return edges;}
-  public void setEdges(List<Edge> edges) {this.edges = edges;}
+  public void addVertexEdge(Edge<T> edge) {
+     this.edges.add(edge);
+  }
+//  public void setEdges(Edge edges) {this.edges = edges;}
 
   @Override
   public String toString(){
     StringBuilder stringBuilder = new StringBuilder();
-    stringBuilder.append("Vertex value: ").append(this.value).append("\n");
-    stringBuilder.append("vertex edges: ").append(this.edges).append("\n");
+    stringBuilder.append(value).append("\n");
+//    for (Edge edge : edges) {
+//      stringBuilder.append("vertex edges: ").append(edge).append("\n"); //creates stack overflow}
+//    }
     return stringBuilder.toString();
   }
 
-  public void setEdges() {
-  }
+
+
+  public void setEdges(){}
+
 }

@@ -19,9 +19,9 @@ public class Edge<T> {
   @Override
   public String toString(){
     StringBuilder stringBuilder = new StringBuilder();
-    stringBuilder.append("source vertex: ").append(this.srcVertex).append("\n");
-    stringBuilder.append("destination vertex: ").append(this.destVertex).append("\n");
-    stringBuilder.append("edge weight: ").append(this.weightBetweenVertex).append("\n");
+    stringBuilder.append(srcVertex).append("\n");
+    stringBuilder.append(destVertex).append("\n");
+    stringBuilder.append(weightBetweenVertex).append("\n");
     return stringBuilder.toString();
   }
 }

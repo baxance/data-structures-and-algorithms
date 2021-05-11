@@ -45,6 +45,30 @@ public class GraphTest {
     graph.addEdge(start, end, "5");
 //    System.out.println(graph.getEdgeList().size());
 //    System.out.println(graph.getEdgeList().get(0).toString());
-    System.out.println(graph.getVertexList().toString());
+//    System.out.println(graph.getVertexList().toString());
+//    System.out.println(graph.getEdgeList().toString());
+//    System.out.println(graph.getVertexList().get(0).toString());
+//    System.out.println(graph.getVertexList());
   }
+
+  @Test
+  public void getNeighborsTest(){
+    Graph graph = new Graph();
+    Vertex vtx1 = new Vertex("vertex 1");
+    Vertex vtx2 = new Vertex("vertex 2");
+    Vertex vtx3 = new Vertex("vertex 3");
+    Vertex vtx4 = new Vertex("vertex 4");
+    graph.addVertex(vtx1);
+    graph.addVertex(vtx2);
+    graph.addVertex(vtx3);
+    graph.addVertex(vtx4);
+    graph.addEdge(vtx1, vtx2, 3);
+    graph.addEdge(vtx1, vtx3, 4);
+    graph.addEdge(vtx1, vtx4, 5);
+    System.out.println(graph.Size());
+    System.out.println(graph.GetNeighbors(vtx1));
+  }
+
+
+
 }
