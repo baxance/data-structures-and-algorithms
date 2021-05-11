@@ -1,20 +1,22 @@
 package graph;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
 public class Graph<T> {
-  public List<Vertex> vertexList = new ArrayList<>();
+  public List<Vertex<T>> vertexList = new ArrayList<>();
   public List<Edge> edgeList = new ArrayList<>();
 
-  public Graph(List<Vertex> vertexList, List<Edge> edgeList) {
+  public Graph(List<Vertex<T>> vertexList, List<Edge> edgeList) {
     this.vertexList = vertexList;
     this.edgeList = edgeList;
   }
-  public Graph() {}
-  public List<Vertex> getVertexList() { return vertexList; }
-  public void setVertexList(List<Vertex> vertexList) { this.vertexList = vertexList; }
+  public Graph(){}
+
+  public List<Vertex<T>> getVertexList() { return vertexList; }
+  public void setVertexList(List<Vertex<T>> vertexList) { this.vertexList = vertexList; }
   public List<Edge> getEdgeList() { return edgeList; }
   public void setEdgeList(List<Edge> edgeList) { this.edgeList = edgeList; }
 
@@ -24,37 +26,36 @@ public class Graph<T> {
     return vertex;
   }
 
-//  public Edge<T> addEdge(T startVtx, T endVtx, T weight){
-//
-//
-//    return edge;
-//  }
-
-  public void addEdge(T startVtx, T endVtx, T weight){
+  public void addEdge(Vertex<T> startVtx, Vertex<T> endVtx, T weight){
     Edge edge = new Edge(startVtx, endVtx, weight);
     edgeList.add(edge);
-
+    Edge edge2 = new Edge(endVtx, startVtx, weight);
+    edgeList.add(edge2);
     if (!vertexList.contains(startVtx)) {
-      addVertex(startVtx).setEdges(getEdgeList());
+      startVtx.addVertexEdge(edge);
     }
     if (!vertexList.contains(endVtx)) {
-      addVertex(endVtx).setEdges();
+      endVtx.addVertexEdge(edge2);
     }
-
-    Vertex vertex = new Vertex(startVtx);
-    vertex.setEdges(edgeList.get());
-    edgeList.add(edge);
   }
 
-//  public Edge<T> addEdge(T startVtx, T endVtx, T weight){
-//    if (!vertexList.contains(startVtx))
-//      addVertex(startVtx);
-//    if (!vertexList.contains(endVtx))
-//      addVertex(endVtx);
-//
-//    Edge edge = new Edge(startVtx, endVtx);
-//
-//    return edge;
-//  }
+  public List<Vertex<T>> GetVertexes(){
+    System.out.println(vertexList);
+    return vertexList;
+  }
+
+  public List<Edge> GetNeighbors(Vertex<T> inputVtx){
+    List<Edge> neighbors = new ArrayList<>();
+    for (Edge edge : edgeList){
+      if (edge.srcVertex == inputVtx || edge.destVertex == inputVtx){
+        neighbors.add(edge);
+      }
+    }
+    return neighbors;
+  }
+
+  public int Size(){
+    return vertexList.size();
+  }
 
 }
