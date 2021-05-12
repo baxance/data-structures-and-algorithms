@@ -71,6 +71,4 @@ public class GraphTest {
     System.out.println(graph.breadthFirst(vtx1).size());
   }
 
-
-
 }
