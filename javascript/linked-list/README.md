@@ -4,7 +4,14 @@ Basic implementation of a Linked List data structure.
 
 ## Challenge
 
-Create a Node class and a Linked List class that contains methods to Insert a value to the Head of the LL, to check if the LL Includes a specific value, and a method to convert all Node values of a LL into a formatted String
+Create a Node class and a Linked List class that contains methods to:
+
+* Insert a value to the Head of the LL
+* Check if the LL Includes a specific value
+* Convert all Node values of a LL into a formatted String
+* Append a new Node to the end of the LL
+* Insert a new Node before a target Node's value
+* insert a new Node after a target Node's value
 
 ## Approach & Efficiency
 
@@ -29,6 +36,25 @@ Create a Node class and a Linked List class that contains methods to Insert a va
 * Iterate through the LL in a While-Loop, under the condition that the `current` node exises (!== null)
 * On each iteration, adding the value of the current node to a specific string format and inserted into the empty string
 * when the loop breaks (current node is null) add `'NULL'` to the end of the string and return the string
+
+### Append
+
+* Create a new Node holding the input
+* iterate through the LL `while` the next node in line is not null
+* when the next node in line is Null, assign the new Node to take it's place
+
+### insertBefore
+
+* Create a new Node holding the input of the new value, and a variable functioning as a pointer
+* if the Head node is the target input, make the head the `next` Node after the new Node and assign the new Node as the `head`
+* iterate through the LL while the current node is not null
+* if the next node in line matched the target input and isn't null then set it to be the `next` Node in line after the new Node
+
+### insertAfter
+
+* create a new Node holding the input of the new value and a variable functioning as a pointer
+* iterate through the LL for as long as the current node is not null
+* if the current node's value is the target input then set the new Node to be the `next` node in line after
 
 ## API
 
