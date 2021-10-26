@@ -6,6 +6,7 @@
 | --------- | -------- |
 | Code Challenge 02 | [Array Insert Shift](array-insert-shift/README.md) |
 | Code Challenge 03 | [Array Binary Search](array-insert-shift/README.md) |
+| Code Challenge 05 | [Single Linked List](linked-list/README.md) |
 
 ### Folder and Challenge Setup
 

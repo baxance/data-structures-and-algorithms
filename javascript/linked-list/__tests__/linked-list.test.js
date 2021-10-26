@@ -1,7 +1,7 @@
 'use strict';
 
 // Require our linked list implementation
-const LinkedList = require('../index');
+const {LinkedList, Node} = require('../index');
 
 describe('Linked List', () => {
   it('works', () => {
@@ -11,20 +11,34 @@ describe('Linked List', () => {
 
 describe('Linked List Insertion', () => {
   test('Insert a new node at the HEAD of a LL', () => {
-    LinkedList.insert(5);
-    expect(LinkedList.head).toBe(5);
+    let newList = new LinkedList();
+    newList.head = new Node(1);
+    newList.head.next = new Node(2);
+    newList.head.next.next = new Node(3);
+    newList.head.next.next.next = new Node(4);
+    newList.insert(5);
+    expect(newList.head.val).toBe(5);
   });
 });
 
 describe('Linked List Includes', () => {
   test('Check if value exists as a Node value in LL', () => {
-    expect(LinkedList.includes(3)).toBe(3);
+    let newList = new LinkedList();
+    newList.head = new Node(1);
+    newList.head.next = new Node(2);
+    newList.head.next.next = new Node(3);
+    newList.head.next.next.next = new Node(4);
+    expect(newList.includes(3)).toBe(true);
   });
 });
 
 describe('Linked List toString', () => {
   test('convert LL values to string formatted "{ a } -> { b } -> { c } -> NULL"  ', () => {
-
-    expect(LinkedList.toString).toBe('{ 1 } -> { 2 } -> { 3 } -> { 4 } -> { NULL }');
+    let newList = new LinkedList();
+    newList.head = new Node(1);
+    newList.head.next = new Node(2);
+    newList.head.next.next = new Node(3);
+    newList.head.next.next.next = new Node(4);
+    expect(newList.toString()).toBe('{ 1 } -> { 2 } -> { 3 } -> { 4 } -> NULL');
   });
 });
