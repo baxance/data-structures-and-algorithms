@@ -21,7 +21,7 @@ class LinkedList {
   }
 
   includes(val){
-    let current = list.head;
+    let current = this.head;
     while(current !== null) {
       if (current.val === val) {
         return true;
@@ -32,12 +32,16 @@ class LinkedList {
   }
 
   toString(){
+    console.log('hitting toString method');
     let str = '';
     let currentNode = this.head;
     while (currentNode !== null) {
+      console.log('hitting toString loop');
       str += '{ ' + currentNode.val + ' } -> ';
+      currentNode = currentNode.next;
     }
     str += 'NULL';
+    console.log('exiting toString loop with string of: ' + str);
     return str;
   }
 }
@@ -49,4 +53,4 @@ list.head.next = new Node(2);
 list.head.next.next = new Node(3);
 list.head.next.next.next = new Node(4);
 
-module.exports = LinkedList;
+module.exports = {LinkedList, Node};
