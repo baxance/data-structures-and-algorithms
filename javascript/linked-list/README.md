@@ -56,6 +56,23 @@ Create a Node class and a Linked List class that contains methods to:
 * iterate through the LL for as long as the current node is not null
 * if the current node's value is the target input then set the new Node to be the `next` node in line after
 
-## API
+### kthFromEnd
 
-I don't see what I can say differently here from Approach/Efficiency.
+  I took what is probably an inefficient approach. First counting the amount of Nodes in the LL, then taking the difference between the amount of Nodes and the input value of `k`. I iterate through the LL again starting at the head, decrementing from that difference until it reaches zero, at which point I've landed at `k` nodes from the last node in the LL.
+
+* Check first if `k` is less than zero, which would return null anyway
+* Create a counter variable starting at 0 and a pointer variable looking at the `head` of the LL
+* iterate through the LL `while` as the pointer is not null, and increment the counter by 1 for every iteration
+
+> * if the next value in the LL is null and the value of `k` is `0` then return the value of the pointer, since we've found it's target
+
+* upon exiting the iteration check `if` the counter and `k` are equal, and return null if so
+* create a new counter variable that is the difference between the earlier counter and the value of `k`
+* check `if` that new counter is less than 0, and return null if so
+* reset the pointer to be looking at the `head` of the LL again
+* check `if` that new counter is greater than zero, if it is:
+
+> * set the pointer to be the next Node, and decrement from the new counter
+> * when the value of the new counter becomes zero, return the value of the pointer
+
+[Back to Table of Contents](../README.md)
