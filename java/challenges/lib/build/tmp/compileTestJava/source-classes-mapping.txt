@@ -1,0 +1,28 @@
+challenges/blog/MergeSortTest.java
+ challenges.blog.MergeSortTest
+challenges/tree/treeTest.java
+ challenges.tree.treeTest
+challenges/ArrayShiftTest.java
+ challenges.ArrayShiftTest
+challenges/BinarySearchTest.java
+ challenges.BinarySearchTest
+challenges/RepeatedWord/RepeatedWordTest.java
+ challenges.RepeatedWord.RepeatedWordTest
+challenges/blog/InsertionSortTest.java
+ challenges.blog.InsertionSortTest
+challenges/utilities/AnimalShelterTest.java
+ challenges.utilities.AnimalShelterTest
+challenges/utilities/MultiBracketValidationTest.java
+ challenges.utilities.MultiBracketValidationTest
+challenges/graphs/GetEdgeTest.java
+ challenges.graphs.GetEdgeTest
+challenges/graphs/GraphTest.java
+ challenges.graphs.GraphTest
+challenges/linkedList/LinkedListTest.java
+ challenges.linkedList.LinkedListTest
+challenges/LibraryTest.java
+ challenges.LibraryTest
+challenges/stacksandqueues/StacksAndQueuesTest.java
+ challenges.stacksandqueues.StacksAndQueuesTest
+challenges/ItineraryTest.java
+ challenges.ItineraryTest
