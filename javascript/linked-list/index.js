@@ -121,7 +121,47 @@ class LinkedList {
     return current.val;
   }
 
-}
+  zipLists(LL1, LL2) {
 
+    let firstPointer = LL1.head;
+    let secondPointer = LL2.head;
+    let temp = firstPointer;
+
+    if(firstPointer === null){
+      console.log('LL1 is null, returning LL2');
+      return LL2.toString();
+    }
+    if(secondPointer === null){
+      console.log('LL2 is null, returning LL1');
+      return LL1.toString();
+    }
+    console.log(LL1.toString());
+    console.log(LL2.toString());
+
+    while(firstPointer !== null || secondPointer !== null) {
+
+      if (firstPointer === null && secondPointer !== null) {
+        LL1.append(secondPointer.val);
+        secondPointer = secondPointer.next;
+        console.log('Zipped list when 2nd list is longer than 1st: ' + LL1.toString());
+        continue;
+      }
+
+      if (firstPointer !== null && secondPointer === null) {
+        console.log('Zipped list when 1st list is longer than 2nd: '+ LL1.toString());
+        return LL1.toString();
+      }
+
+      temp = firstPointer.next;
+      firstPointer.next = secondPointer;
+      secondPointer = secondPointer.next;
+      firstPointer.next.next = temp;
+      firstPointer = firstPointer.next.next;
+      console.log('first pointer before exiting loop: ' + firstPointer);
+    }
+    console.log(LL1.toString());
+    return LL1.toString();
+  }
+}
 
 module.exports = {LinkedList, Node};
