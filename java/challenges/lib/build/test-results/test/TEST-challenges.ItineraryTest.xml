@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="challenges.ItineraryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-01T16:32:21" hostname="LAPTOP-L57CFBMG" time="0.006">
+  <properties/>
+  <testcase name="itineraryTest" classname="challenges.ItineraryTest" time="0.006"/>
+  <system-out><![CDATA[planeTickets = challenges.TEST.PlaneTicket@13cfff0f
+test = challenges.TEST.PlaneTicket@13cfff0f
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
