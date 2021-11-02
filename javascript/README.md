@@ -10,3 +10,5 @@
 | Code Challenge 06 | [Linked List Insertions](linked-list/README.md)
 | Code Challenge 07 | ['k'th value from the end of a Linked List](linked-list/README.md)
 | Code Challenge 08 | [Zip two Linked Lists](linked-list/README.md)
+| Code Challenge 10 | [stacks and queues](stackAndQueue/README.md)
+| Code Challenge 11 | [pseudoQueue](stackAndQueue/README.md)
