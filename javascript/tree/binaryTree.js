@@ -1,6 +1,8 @@
 'use strict';
 
-require('./node');
+
+const Node = require('./node');
+// require('./node');
 
 class BinaryTree {
   constructor()
@@ -79,17 +81,25 @@ class BinaryTree {
   */
 
   findMax() {
+    console.log('entering findmax method');
     if (!this.root) { return null; }
-    let temp = this.root;
+    let temp = this.root.value;
     this._findMax(this.root, temp);
   }
   _findMax(node, highInteger) {
-    if (node && node.value > highInteger) {
+    console.log('entering _findmax recursion method. highinteger is ' + highInteger.value);
+
+    if (node.left > highInteger) {
+      highInteger = this._findMax(node.left, highInteger);
+    }
+
+
+    if (node && node.value > highInteger.value) {
       highInteger = node.value;
     }
-    if (!node) { return highInteger; }
-    this._findMax(node.left, highInteger);
-    this._findMax(node.right, highInteger);
+    if (!node) { return highInteger.value; }
+    this._findMax(node.left, highInteger.value);
+    this._findMax(node.right, highInteger.value);
   }
 
   // _preOrder(node, results) {
