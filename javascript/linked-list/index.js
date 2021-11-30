@@ -162,6 +162,29 @@ class LinkedList {
     console.log(LL1.toString());
     return LL1.toString();
   }
+
+  average(LL) {
+    if (!LL.head) return null;
+    let head = LL.head;
+    let counter = 0;
+    let sum = 0;
+
+    this._average(head, counter, sum);
+  }
+
+  _average(head, counter, sum) {
+    console.log(head.val);
+    console.log(sum);
+    console.log(counter);
+    console.log(sum/counter);
+    counter++;
+    sum += head.val;
+    let avg = sum/counter;
+    if (head.next) {
+      this._average(head.next, counter, sum);
+    } else return avg;
+  }
+
 }
 
 module.exports = {LinkedList, Node};
