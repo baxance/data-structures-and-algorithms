@@ -12,3 +12,4 @@
 | Code Challenge 08 | [Zip two Linked Lists](linked-list/README.md)
 | Code Challenge 10 | [stacks and queues](stackAndQueue/README.md)
 | Code Challenge 11 | [pseudoQueue](stackAndQueue/README.md)
+| Code Challenge 31 | [Hash Map: Repeated Word](hashmap-repeatedWord/README.md)
