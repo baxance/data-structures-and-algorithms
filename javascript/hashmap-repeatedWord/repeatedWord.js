@@ -44,5 +44,4 @@ function countWords(string) {
   return wordMap.entries();
 }
 
-
 module.exports = { firstRepeatedWord, countWords };
